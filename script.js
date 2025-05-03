@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Redirect to main.html after fade-out animation
             setTimeout(() => {
-                window.location.href = 'main.html';
+                window.location.href = './main.html';
             }, 500); // Match this with CSS transition duration
         }, 3000); // Wait for 3 seconds before starting fade-out
     }
