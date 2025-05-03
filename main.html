@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой Банк</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="bank-app fade-in">
+        <header>
+            <div class="profile">
+                <img src="https://cdn.leonardo.ai/users/44c567cc-75d2-45f0-9534-f4801d541b2f/generations/1b79a63a-34a7-4325-b587-be72c0d1aac9/segments/1:4:1/Flux_Dev_A_modern_sleek_logo_design_for_Volt_Bank_created_by_T_0.jpg" alt="Профиль" class="profile-avatar">
+                <div class="profile-info">
+                    <button id="loginButton" class="action-btn">Login with Telegram</button>
+                    <div id="profileDetails" style="display: none;">
+                        <h2 id="userName"></h2>
+                        <p>Личный счет</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="balance-card">
+                <h3>Общий баланс</h3>
+                <div class="balance">
+                    <span class="amount">145 320 ₽</span>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <div class="action-grid">
+                    <button class="action-btn">
+                        <i class="icon-transfer">➡️</i>
+                        <span>Перевод</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="icon-pay">💳</i>
+                        <span>Платежи</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="icon-deposit">💰</i>
+                        <span>Депозит</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="icon-history">📋</i>
+                        <span>История</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <h3>Последние транзакции</h3>
+                <ul>
+                    <li>
+                        <span class="transaction-name">Перевод в Сбербанк</span>
+                        <span class="transaction-amount">-5 000 ₽</span>
+                    </li>
+                    <li>
+                        <span class="transaction-name">Зарплата</span>
+                        <span class="transaction-amount income">+75 000 ₽</span>
+                    </li>
+                    <li>
+                        <span class="transaction-name">Коммунальные платежи</span>
+                        <span class="transaction-amount">-3 500 ₽</span>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn active">Счета</button>
+            <button class="nav-btn">Карты</button>
+            <button class="nav-btn">Еще</button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
