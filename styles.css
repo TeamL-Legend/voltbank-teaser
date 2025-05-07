@@ -4,67 +4,35 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black;
     font-family: Arial, sans-serif;
-    transition: opacity 0.5s ease-out;
-    overflow: hidden;
-    position: relative;
-    padding: 0 10px;
-    box-sizing: border-box;
-    background-color: black; 
-}
-
-body.fade-out {
-    opacity: 0;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-body.fade-in {
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-.bank-app.fade-in {
-    animation: fadeIn 0.5s ease-in forwards;
 }
 
 .telegram-welcome {
     text-align: center;
     opacity: 0;
     transform: scale(0.7);
+    background-color: black;
     animation: welcomeAnimation 1.5s ease-out forwards;
-    padding: 10px;
 }
 
 .logo {
-    width: 300px;
-    margin: 0 auto 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 200px;
+    margin: 0 auto 20px;
 }
 
-.logo img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.logo svg {
+    width: 100%;
+    height: 100%;
 }
 
 .welcome-text h1 {
     color: #333;
-    margin-bottom: 5px;
-    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .welcome-text p {
     color: #666;
-    font-size: 0.8em;
 }
 
 @keyframes welcomeAnimation {
@@ -84,25 +52,17 @@ body.fade-in {
 
 .bank-app {
     max-width: 480px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
+    margin: 0 auto;
+    background-color: #f4f4f4;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: #54A9EB;
     color: white;
     padding: 20px;
-    position: relative;
-    z-index: 2;
 }
 
 .profile {
@@ -117,83 +77,19 @@ header {
     margin-right: 15px;
 }
 
-.profile-info {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-#loginButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-#loginButton:hover {
-    background-color: #0056b3;
-}
-
-#profileDetails h2 {
-    margin: 0;
-    font-size: 1.2em;
-    color: white;
-}
-
-#profileDetails p {
-    margin: 0;
-    font-size: 0.8em;
-    color: #ccc;
-}
-
-.bank-app main {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.bank-app main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://images.hdqwalls.com/download/abstract-dark-purple-4k-uz-2932x2932.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-
-.balance-card,
-.quick-actions,
-.recent-transactions {
-    position: relative;
-    z-index: 2;
-}
-
 .balance-card {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
     margin: 15px;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .balance .amount {
     font-size: 2em;
     font-weight: bold;
-    color: white;
+    color: #333;
 }
 
 .quick-actions {
@@ -207,29 +103,26 @@ header {
 }
 
 .action-btn {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
     border: none;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .action-btn i {
-    color: white;
     font-size: 1.5em;
     margin-bottom: 5px;
 }
 
 .recent-transactions {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
     margin: 15px;
     border-radius: 15px;
     padding: 15px;
-    color: white;
 }
 
 .recent-transactions ul {
@@ -241,8 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .transaction-amount.income {
@@ -251,10 +143,8 @@ header {
 
 .bottom-nav {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.95);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    z-index: 2;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
 }
 
 .nav-btn {
@@ -263,26 +153,9 @@ header {
     background: none;
     border: none;
     font-weight: bold;
-    color: white;
-    cursor: pointer;
+    color: #666;
 }
 
 .nav-btn.active {
-    color: #90CAF9;
-}
-
-.recent-transactions h3,
-.quick-actions h3,
-.balance-card h3 {
-    color: white;
-}
-
-@media (max-width: 600px) {
-    .action-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .bank-app {
-        border-radius: 0;
-    }
+    color: #54A9EB;
 }
